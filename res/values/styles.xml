@@ -1,29 +1,30 @@
 <resources>
-
-    <!-- Application theme. -->
-    <style name="AppTheme" parent="AppTheme.Base">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
-       
-    </style>
-
-    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">        
+    <!--设置自定义的ToolBar，其中Light是颜色偏明亮一点的主题，也可以去掉，那主题的颜色等都需要自己设定
+                     这里的AppTheme要与AndroidManifest.xml中的保持一致，否则需要重新注册--> 
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--若不为NoActionBar一定要加上这两句，这里可以不加--> 
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--设置自己的ToolBar颜色-->        
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <!--设置ToolBar中字体的颜色，为白色--> 
+        <item name="android:textColor">#ffffff</item>
+        <!--设置ToolBar中Menu中三个点的颜色--> 
         <item name="android:textColorSecondary">#ffffff</item>
+        <!--设置ToolBar中Menu的弹出的主题--> 
          <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
     </style>
+    <!--设置ToolBar中Menu的弹出的主题--> 
     <style name="OverflowMenuStyle" parent="@style/Widget.AppCompat.Light.PopupMenu.Overflow">
-    <!-- 是否覆盖锚点，默认为true，即盖住Toolbar -->
+    <!-- 默认为true，会与Toolbar有覆盖 -->
     <item name="overlapAnchor">false</item>
-    <!-- 弹出层背景颜色 -->
+    <!-- 背景颜色设置 -->
     <item name="android:popupBackground">@color/colorPrimary</item>
-    <!-- 弹出层垂直方向上的偏移，即在竖直方向上距离Toolbar的距离，值为负则会盖住Toolbar -->
+    <!-- 弹出的Menu竖直上与Toolbar的距离，可以适时调整，保证不会覆盖Toolbar -->
     <item name="android:dropDownVerticalOffset">5dp</item>
-    <!-- 弹出层水平方向上的偏移，即距离屏幕左边的距离，负值会导致右边出现空隙 -->
+    <!-- 弹出的Menu水平上与屏幕间的距离 -->
     <item name="android:dropDownHorizontalOffset">0dp</item>
-</style>
-
-  
-
+</style>  
 </resources>

@@ -19,8 +19,7 @@ public class MainActivity extends AppCompatActivity {
 	private Toolbar toolbar;
 	private ImageView more;
 	private PopupMenu popupMenu;
-	private Menu menu;
-	 
+	private Menu menu;	 
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -65,17 +64,18 @@ public class MainActivity extends AppCompatActivity {
 		//title在XML文件中设置为toolbar:title="Title"，前提是
 		//在RelativeLayout中添加xmlns:toolbar="http://schemas.android.com/apk/res-auto"
 		//用的不是android:命名空间，而是自定义命名空间
+//		若采用toolbar.setTitle("Title")，并不能进行修改，默认为项目的名称
 //		getSupportActionBar().setTitle("Title");
 		getSupportActionBar().setSubtitle("subTitle");
 		getSupportActionBar().setLogo(R.drawable.ic_launcher);
 		toolbar.setNavigationIcon(R.drawable.ic_launcher2);
 
 	}
-    //在XML中设置了Onclick
-	public void popupmenu(View v) {
-		popupMenu.show();
-	}
-//	使用toolbar来实现Menu，自定义的toolbar在主题中可以更改Menu主题
+//    //在XML中设置了Onclick
+//	public void popupmenu(View v) {
+//		popupMenu.show();
+//	}
+//	使用toolbar来实现Menu，自定义的toolbar在主题中可以更改Menu主题，这里进行了重写，自定义了Menu
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) { 
 	       getMenuInflater().inflate(R.menu.main, menu);  
@@ -106,7 +106,6 @@ public class MainActivity extends AppCompatActivity {
 		                return true;//return false 的区别
 		            }
 		        });
-	       return true;
-	       
+	       return true;	       
 	}
 }
