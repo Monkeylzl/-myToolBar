@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 //		menu = popupMenu.getMenu();
         //通过代码添加菜单项
 //		menu.add(Menu.NONE, Menu.FIRST + 0, 0, "copy");
-//		menu.add(Menu.NONE, Menu.FIRST + 1, 1, "粘贴");
+//		menu.add(Menu.NONE, Menu.FIRST + 1, 1, "paste");
 //		//通过XML文件添加菜单项
 //		MenuInflater menuInflater = getMenuInflater();
 //		menuInflater.inflate(R.menu.popupmenu, menu);	
