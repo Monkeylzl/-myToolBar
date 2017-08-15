@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 //		   public boolean onMenuItemClick(MenuItem item) {
 //				switch (item.getItemId()) {
 //				 case R.id.save:
-//				 Toast.makeText(MainActivity.this, "±£´æ",
+//				 Toast.makeText(MainActivity.this, "save",
 //				 Toast.LENGTH_LONG).show();
 //				 break;
 //				case Menu.FIRST + 0:
